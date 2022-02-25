@@ -22,7 +22,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(AuthenticationManagerBuilder authenticationManagerBuilder) throws Exception{
         authenticationManagerBuilder.inMemoryAuthentication()
-                .withUser("javainuse")
+                .withUser("me")
                 .password(passwordEncoder().encode("my-openapi"))
                 .authorities("ADMIN");
     }
