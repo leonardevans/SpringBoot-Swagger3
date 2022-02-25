@@ -1,12 +1,14 @@
 package com.swagger3.springbootswagger3.controller;
 
 import com.swagger3.springbootswagger3.model.Employee;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @RestController
+@SecurityRequirement(name = "myapi")
 public class EmployeeController {
     private List<Employee> employees = createList();
 
